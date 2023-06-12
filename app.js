@@ -32,7 +32,7 @@ app.use("/api/user", user);
 app.use("/api/product", product);
 
 app.get("/", (req, res) => {
-  res.send(`<h1>this is the frontend url <a href="">this</a></h1>`);
+  res.send(`<h1>this is the frontend url <a href="${process.env.FRONTEND_URI}">this</a></h1>`);
 });
 
 export default app;
